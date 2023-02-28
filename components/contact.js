@@ -46,7 +46,7 @@ function Contacts(props) {
         <div className="h-24  flex items-center justify-center">
           <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-green-600 rounded-md w-12 h-12 ">
             {React.cloneElement(props.icon, {
-              className: "w-7 text-indigo-50",
+              className: "h-12 w-7  text-indigo-50",
             })}
           </div>
         </div>
