@@ -8,7 +8,26 @@ import Footer from "../components/footer";
 import Pricing from "../components/pricing";
 import Contact from "../components/contact";
 import styles from "../css/style.module.css";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
+function Section(props) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  return (
+    <section className="relative" ref={ref}>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
+        {props.children}
+      </div>
+    </section>
+  );
+}
 export default function Home() {
   return (
     <>
@@ -18,26 +37,26 @@ export default function Home() {
         <link rel="icon" href="../favicon.ico" />
       </Head>
       <Navbar />
-      <div className="relative">
+      <Section>
         <Hero />
-      </div>
-      <div className="relative">
+      </Section>
+      <Section>
         <span className={styles.star}></span>
         <Benefits data={benefitOne} />
-      </div>
-      <div className="relative ">
+      </Section>
+      <Section>
         <span className={styles.star}></span>
         <Products data={products} />
-      </div>
-
-      <div className="relative">
+      </Section>
+      <Section>
         <span className={styles.star}></span>
         <Pricing />
-      </div>
-      <div className="relative">
+      </Section>
+      <Section>
         <span className={styles.star}></span>
         <Contact data={contacts} />
-      </div>
+      </Section>
+
       <Footer />
     </>
   );

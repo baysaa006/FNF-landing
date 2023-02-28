@@ -28,7 +28,7 @@ export default function Navbar() {
                   className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-green-500 focus:text-green-500  focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
                 >
                   <svg
-                    className="w-8 h-8 fill-gray-800"
+                    className="w-8 h-8"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >

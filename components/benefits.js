@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
-
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 export default function Benefits(props) {
   const { data } = props;
 
@@ -31,10 +32,26 @@ export default function Benefits(props) {
     </Container>
   );
 }
-
+function Section(props) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  return (
+    <section ref={ref}>
+      <div
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
+        {props.children}
+      </div>
+    </section>
+  );
+}
 function Benefit(props) {
   return (
-    <>
+    <Section>
       <div className="flex items-start  shadow-md   px-4 py-2  rounded-md mt-8 space-x-3">
         <div className="h-24  flex items-center justify-center">
           <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-green-600 rounded-md w-11 h-11 ">
@@ -52,6 +69,6 @@ function Benefit(props) {
           </p>
         </div>
       </div>
-    </>
+    </Section>
   );
 }

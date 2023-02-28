@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Container from "./container";
 import heroImg from "../public/img/farm1.jpg";
-import styles from "../css/style.module.css";
 
 export default function Hero() {
   return (
