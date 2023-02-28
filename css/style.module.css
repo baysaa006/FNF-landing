@@ -1,0 +1,39 @@
+.star {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+
+.star:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(251, 191, 36);
+  display: block;
+  left: 0;
+  width: 141.4213%; /* 100% * √2 */
+  top: 0;
+  bottom: 0;
+  border-radius: 20%;
+  transform: rotate(66.66deg) skewX(45deg);
+}
+
+/* the same but +90deg to rotate */
+.star:after {
+  transform: rotate(156.66deg) skew(45deg);
+  box-shadow: 0px 1px 10px rgba(5, 150, 105, 1);
+}
+
+.star {
+  top: 2rem;
+  right: 4rem;
+  position: absolute;
+  z-index: 99;
+}
+@media screen and (min-width: 1072px) {
+  .star {
+    top: 3rem;
+    left: 6rem;
+    position: absolute;
+    z-index: 99;
+  }
+}

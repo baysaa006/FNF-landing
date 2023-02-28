@@ -1,0 +1,47 @@
+import Image from "next/image";
+import React from "react";
+import Container from "./container";
+
+export default function Products(props) {
+  const { data } = props;
+
+  return (
+    <Container>
+      <div className="flex  items-center w-full ">
+        <div className="flex flex-col  lg:items-center w-full mt-4">
+          <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+            {data.title}
+          </h3>
+          <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+            {data.desc}
+          </p>
+        </div>
+      </div>
+      <div className="w-full mt-5 flex flex-col lg:gap-4 lg:flex-row lg:justify-between ">
+        {data.product.map((item, index) => (
+          <Product key={index} title={item.title} image={item.image}>
+            {item.desc}
+          </Product>
+        ))}
+      </div>
+    </Container>
+  );
+}
+
+function Product(props) {
+  return (
+    <div className="flex flex-col px-4 py-2   rounded-lg shadow-md gap-2 items-start mt-6 ">
+      <div className="flex items-center justify-center flex-shrink-0   w-full h-24 ">
+        <Image src={props.image} width={120} height={120} alt="" />
+      </div>
+      <div>
+        <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
+          {props.title}
+        </h4>
+        <p className="mt-1 text-gray-500 dark:text-gray-400">
+          {props.children}
+        </p>
+      </div>
+    </div>
+  );
+}

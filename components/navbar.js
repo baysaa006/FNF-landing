@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
+import logo from "../public/favicon.png";
+import Image from "next/image";
 
 export default function Navbar() {
   const navigation = [
@@ -15,13 +17,18 @@ export default function Navbar() {
           {({ open }) => (
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
-                <Disclosure>Logo</Disclosure>
+                <Disclosure>
+                  <Image height={55} width={55} src={logo} alt="" />
+                  <h3 className="font-bold ml-2 text-black">
+                    F&F Catering LLC
+                  </h3>
+                </Disclosure>
                 <Disclosure.Button
                   aria-label="Toggle Menu"
                   className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-green-500 focus:text-green-500  focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
                 >
                   <svg
-                    className="w-6 h-6 fill-current"
+                    className="w-8 h-8 fill-gray-800"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
