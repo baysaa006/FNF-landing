@@ -11,8 +11,8 @@ export default function Navbar() {
     { title: "Холбоо барих", route: "contact" },
   ];
   return (
-    <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-5 mx-auto lg:justify-between xl:px-0">
+    <div className="w-full fixed top-0 z-30 bg-white shadow-md">
+      <nav className="container relative flex flex-wrap items-center justify-between px-4 py-3 mx-auto lg:justify-between xl:px-0">
         <Disclosure>
           {({ open }) => (
             <>

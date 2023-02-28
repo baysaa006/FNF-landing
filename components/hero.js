@@ -4,7 +4,7 @@ import heroImg from "../public/img/farm1.jpg";
 
 export default function Hero() {
   return (
-    <Container className="flex flex-wrap ">
+    <Container className="flex flex-wrap mt-24 ">
       <div className="flex items-center w-full lg:w-1/2">
         <div className="max-w-2xl ">
           <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight ">
@@ -15,8 +15,8 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <div className="flex mb-8   relative  items-center justify-center w-full lg:w-1/2">
-        <div clasName="  rounded-l-2xl rounded-t-lg rounded-r-xl">
+      <div className="flex mb-8  lg:mt-4   relative  items-center justify-center w-full lg:w-1/2">
+        <div clasName=" rounded-l-2xl rounded-t-lg rounded-r-xl">
           <Image
             className="rounded-tr-[40%] rounded-b-[40%] rounded-tl-3xl"
             height={400}
