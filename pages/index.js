@@ -41,22 +41,17 @@ export default function Home() {
         <Hero />
       </Section>
       <Section>
-        <span id="about" className={styles.star}></span>
         <About data={benefitOne} />
       </Section>
       <Section>
-        <span id="product" className={styles.star}></span>
         <Products data={products} />
       </Section>
       <Section>
-        <span id="price" className={styles.star}></span>
         <Pricing />
       </Section>
       <Section>
-        <span id="contact" className={styles.star}></span>
         <Contact data={contacts} />
       </Section>
-
       <Footer />
     </>
   );

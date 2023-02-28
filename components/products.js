@@ -8,7 +8,7 @@ export default function Products(props) {
 
   return (
     <Container>
-      <div className="flex  items-center w-full ">
+      <div id="product" className="flex  items-center w-full ">
         <div className="flex flex-col  lg:items-center w-full mt-4">
           <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
             {data.title}

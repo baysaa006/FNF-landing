@@ -4,7 +4,7 @@ import Container from "./container";
 function Pricing() {
   return (
     <Container>
-      <div className="flex  items-center w-full  ">
+      <div id="price" className="flex  items-center w-full  ">
         <div className="flex flex-col  lg:items-center w-full mt-4">
           <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
             Үнийн санал

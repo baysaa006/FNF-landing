@@ -2,13 +2,33 @@ import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
 import logo from "../public/favicon.png";
 import Image from "next/image";
+import { AiOutlineContacts } from "react-icons/ai";
+import { IoPricetagsOutline } from "react-icons/io5";
+import { GiFarmTractor } from "react-icons/gi";
+import { HiOutlineDocumentText } from "react-icons/hi2";
 
 export default function Navbar() {
   const navigation = [
-    { title: "Бидний тухай ", route: "about" },
-    { title: "Бүтээгдэхүүн", route: "product" },
-    { title: "Үнийн санал ", route: "price" },
-    { title: "Холбоо барих", route: "contact" },
+    {
+      title: "Бидний тухай ",
+      route: "about",
+      icon: <HiOutlineDocumentText className="h-8 w-8 text-gray-500" />,
+    },
+    {
+      title: "Бүтээгдэхүүн",
+      route: "product",
+      icon: <GiFarmTractor className="h-8 w-8 text-gray-500" />,
+    },
+    {
+      title: "Үнийн санал ",
+      route: "price",
+      icon: <IoPricetagsOutline className="h-8 w-8 text-gray-500" />,
+    },
+    {
+      title: "Холбоо барих",
+      route: "contact",
+      icon: <AiOutlineContacts className="h-8 w-8 text-gray-500" />,
+    },
   ];
   return (
     <div className="w-full fixed top-0 z-30 bg-white shadow-md">
@@ -48,16 +68,19 @@ export default function Navbar() {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+                <Disclosure.Panel className="flex  flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <a
-                        key={index}
-                        href={`#${item.route}`}
-                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-green-500 focus:text-green-500  "
-                      >
-                        {item.title}
-                      </a>
+                      <div className="flex  px-4 py-1 border-b-2 flex-row items-center w-full">
+                        {item.icon}
+                        <a
+                          key={index}
+                          href={`#${item.route}`}
+                          className="w-full p-4 text-gray-500   hover:text-green-500 focus:text-green-500  "
+                        >
+                          {item.title}
+                        </a>
+                      </div>
                     ))}
                     <a className="w-full px-6 py-2 mt-3 text-center text-white bg-green-600 rounded-full lg:ml-5">
                       Яг одоо захиалах
