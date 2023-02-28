@@ -15,59 +15,48 @@ export default function Footer() {
   return (
     <div className="relative">
       <Container>
-        <div className=" mb-6 grid max-w-screen-xl grid-cols-1 gap-10 pt-5 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+        <div className=" mb-6 grid max-w-screen-xl grid-cols-1 gap-10 pt-5 mx-auto mt-5 border-t border-gray-100 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="flex flex-row items-center">
               <Image height={55} width={55} src={logo} alt="" />
               <h3 className="font-bold ml-2 text-black">F&F Catering LLC</h3>
             </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
+            <div className="max-w-md mt-4 text-gray-500 ">
               Өглөө бүр шинэ ногоо таны гал тогоонд хүргэж өгөх болно
             </div>
           </div>
 
-          <div>
-            <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {navigation.map((item, index) => (
-                <Link key={index} href="/">
-                  <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
-                    {item}
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
           <div className="">
-            <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
-              <a
+            <div className="flex mt-5 space-x-5 text-gray-400 ">
+              <Link
                 href="https://twitter.com/web3templates"
                 target="_blank"
                 rel="noopener"
               >
                 <span className="sr-only">Twitter</span>
                 <Twitter />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://facebook.com/web3templates"
                 target="_blank"
                 rel="noopener"
               >
                 <span className="sr-only">Facebook</span>
                 <Facebook />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://instagram.com/web3templates"
                 target="_blank"
                 rel="noopener"
               >
                 <span className="sr-only">Instagram</span>
                 <Instagram />
-              </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener">
+              </Link>
+              <Link href="https://linkedin.com/" target="_blank" rel="noopener">
                 <span className="sr-only">Linkedin</span>
                 <Linkedin />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -125,11 +114,11 @@ const Linkedin = ({ size = 24 }) => (
 
 const Backlink = () => {
   return (
-    <a
+    <Link
       href="https://web3templates.com"
       target="_blank"
       rel="noopener"
-      className="absolute flex px-3 py-1 space-x-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded shadow-sm place-items-center left-5 bottom-5 dark:bg-trueGray-900 dark:border-trueGray-700 dark:text-trueGray-300"
+      className="absolute flex px-3 py-1 space-x-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded shadow-sm place-items-center left-5 bottom-5 "
     >
       <svg
         width="20"
@@ -145,6 +134,6 @@ const Backlink = () => {
           fill="#F7FAFC"
         />
       </svg>
-    </a>
+    </Link>
   );
 };
