@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function Navbar() {
   const navigation = [
-    "Бидний тухай ",
-    "Бүтээгдэхүүн",
-    "Үнийн санал",
-    "Холбоо барих",
+    { title: "Бидний тухай ", route: "about" },
+    { title: "Бүтээгдэхүүн", route: "product" },
+    { title: "Үнийн санал ", route: "price" },
+    { title: "Холбоо барих", route: "contact" },
   ];
   return (
     <div className="w-full">
@@ -51,8 +51,12 @@ export default function Navbar() {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-green-500 focus:text-green-500  ">
-                        {item}
+                      <a
+                        key={index}
+                        href={`#${item.route}`}
+                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-green-500 focus:text-green-500  "
+                      >
+                        {item.title}
                       </a>
                     ))}
                     <a className="w-full px-6 py-2 mt-3 text-center text-white bg-green-600 rounded-full lg:ml-5">
@@ -68,8 +72,11 @@ export default function Navbar() {
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-green-500 focus:text-green-500  focus:outline-none ">
-                  {menu}
+                <a
+                  href={`#${menu.route}`}
+                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-green-500 focus:text-green-500  focus:outline-none "
+                >
+                  {menu.title}
                 </a>
               </li>
             ))}

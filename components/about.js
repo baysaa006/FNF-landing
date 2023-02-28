@@ -3,7 +3,7 @@ import React from "react";
 import Container from "./container";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-export default function Benefits(props) {
+export default function About(props) {
   const { data } = props;
 
   return (
@@ -61,12 +61,8 @@ function Benefit(props) {
           </div>
         </div>
         <div>
-          <h4 className="text-xl font-medium text-gray-800 ">
-            {props.title}
-          </h4>
-          <p className="mt-1 text-gray-500 ">
-            {props.children}
-          </p>
+          <h4 className="text-xl font-medium text-gray-800 ">{props.title}</h4>
+          <p className="mt-1 text-gray-500 ">{props.children}</p>
         </div>
       </div>
     </Section>

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import { benefitOne, products, contacts } from "../components/data";
-import Benefits from "../components/benefits";
+import About from "../components/about";
 import Products from "../components/products";
 import Footer from "../components/footer";
 import Pricing from "../components/pricing";
@@ -41,19 +41,19 @@ export default function Home() {
         <Hero />
       </Section>
       <Section>
-        <span className={styles.star}></span>
-        <Benefits data={benefitOne} />
+        <span id="about" className={styles.star}></span>
+        <About data={benefitOne} />
       </Section>
       <Section>
-        <span className={styles.star}></span>
+        <span id="product" className={styles.star}></span>
         <Products data={products} />
       </Section>
       <Section>
-        <span className={styles.star}></span>
+        <span id="price" className={styles.star}></span>
         <Pricing />
       </Section>
       <Section>
-        <span className={styles.star}></span>
+        <span id="contact" className={styles.star}></span>
         <Contact data={contacts} />
       </Section>
 
