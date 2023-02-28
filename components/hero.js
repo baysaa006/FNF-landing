@@ -25,7 +25,7 @@ export default function Hero() {
             alt="hero"
           />
           <div className="-bottom-5  lg:left-[22%] bg-yellow-400  p-2 absolute rounded-full ">
-            <h3 className="absolute right-[34%] bottom-1/3 text-4xl font-semibold  ">
+            <h3 className="absolute right-[34%] bottom-1/3 text-4xl  text-black font-semibold  ">
               #1
             </h3>
             <svg
