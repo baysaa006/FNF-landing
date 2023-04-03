@@ -45,9 +45,19 @@ function Contacts(props) {
       <div className="flex items-start  space-x-3">
         <div className="h-24  flex items-center justify-center">
           <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-green-600 rounded-md w-12 h-12 ">
-            {React.cloneElement(props.icon, {
-              className: "h-12 w-7  text-indigo-50",
-            })}
+            <a
+              target="_blank"
+              href={
+                (props.title === "Утас" && `tel:+${props.desc}`) ||
+                (props.title === "И-майл" && `mailto:${props.desc}`) ||
+                (props.title === "Хаяг" &&
+                  `http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003`)
+              }
+            >
+              {React.cloneElement(props.icon, {
+                className: "h-12 w-7  text-indigo-50",
+              })}
+            </a>
           </div>
         </div>
         <div className="h-24  flex flex-col items-start justify-center">
