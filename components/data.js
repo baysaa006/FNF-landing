@@ -46,12 +46,12 @@ export const benefitOne = {
   bullets: [
     {
       title: "Олон жилийн туршлага",
-      desc: "Хүнсний ногооны салбарт хуримтлуулсан туршлага",
+      desc: "Туршлага дээр суурьлан  тууштай ажилдаг",
       icon: <EmojiHappyIcon />,
     },
     {
       title: "Итгэл даах түнш",
-      desc: "Олон харилцагчийн итгэлийг даан ажиллаж байгаа",
+      desc: "Олон харилцагчийн итгэлийг даан ажилдаг",
       icon: <ChartSquareBarIcon />,
     },
     {
@@ -63,7 +63,7 @@ export const benefitOne = {
 };
 export const products = {
   title: "Бүтээгдэхүүн",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  desc: "Стандартын дагуу хадгалж бэлтгэсэн хүнсний ногоо, жимс жимсгэнийг найдвартай нийлүүлдэг ",
   product: [
     {
       title: "Брокли",
