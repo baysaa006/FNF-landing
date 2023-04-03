@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Slider from "./image_slider";
 import Container from "./container";
 
-export default function About1(props) {
+export default function About(props) {
   const { data } = props;
 
   return (
@@ -16,21 +16,15 @@ export default function About1(props) {
           props.imgPos === "right" ? "lg:justify-end" : ""
         }`}
       >
-        <h3 className="max-w-2xl mb-4 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
+        <h3 className=" mb-4 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
           {data.title}
         </h3>
-        <div className=" md:gap-3 md:grid md:grid-cols-2 md:items-start justify-start xl:items-start w-full mt-4">
-          {data.desc.map((e) => (
-            <Section>
-              <div className="mb-4 xl:items-center h-max md:justify-between">
-                <Image className="rounded-lg" width="auto" src={e.photo} />
-                <p className="max-w-2xl text-lg leading-normal text-gray-500 lg:text-xl xl:text-2xl  ">
-                  {e.title}
-                </p>
-              </div>
-            </Section>
-          ))}
+        <div className=" mb-4 md:items-start justify-start xl:items-center w-full mt-4">
+          <p className=" w-full xl:items-center text-lg leading-normal text-gray-500 lg:text-xl xl:text-2xl  ">
+            {data.desc}
+          </p>
         </div>
+        <Slider />
         <div className="w-full mt-5 gap-4 flex flex-col lg:gap-4 lg:flex-row lg:justify-between ">
           {data.bullets.map((item, index) => (
             <Benefit key={index} title={item.title} icon={item.icon}>
