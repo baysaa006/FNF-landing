@@ -47,9 +47,6 @@ export default function Home() {
         <Products data={products} />
       </Section>
       <Section>
-        <Pricing />
-      </Section>
-      <Section>
         <Contact data={contacts} />
       </Section>
       <Footer />
