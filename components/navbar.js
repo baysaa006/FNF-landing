@@ -20,11 +20,6 @@ export default function Navbar() {
       icon: <GiFarmTractor className="h-8 w-8 text-gray-500" />,
     },
     {
-      title: "Үнийн санал ",
-      route: "price",
-      icon: <IoPricetagsOutline className="h-8 w-8 text-gray-500" />,
-    },
-    {
       title: "Холбоо барих",
       route: "contact",
       icon: <AiOutlineContacts className="h-8 w-8 text-gray-500" />,
@@ -82,7 +77,11 @@ export default function Navbar() {
                         </a>
                       </div>
                     ))}
-                    <a className="w-full px-6 py-2 mt-3 text-center text-white bg-green-600 rounded-full lg:ml-5">
+                    <a
+                      target="_blank"
+                      href="tel:+${props.desc}"
+                      className="w-full px-6 py-2 mt-3 text-center text-white bg-green-600 rounded-full lg:ml-5"
+                    >
                       Яг одоо захиалах
                     </a>
                   </>

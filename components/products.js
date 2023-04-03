@@ -45,7 +45,7 @@ function Section(props) {
     </section>
   );
 }
-function Product(props) {
+export function Product(props) {
   return (
     <Section>
       <div className="flex flex-col px-4 py-2   rounded-lg shadow-md gap-2 items-start mt-6 ">

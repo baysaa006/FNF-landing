@@ -9,28 +9,54 @@ import product1 from "../public/img/procli.jpg";
 import product2 from "../public/img/potato.jpg";
 import product3 from "../public/img/tomato.jpg";
 import product4 from "../public/img/carrot.jpg";
+import photo1 from "../public/img/company/03.jpg";
+import photo2 from "../public/img/company/05.jpg";
+import photo3 from "../public/img/company/07.jpg";
+import photo5 from "../public/img/company/01.jpg";
+
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 
 export const benefitOne = {
   title: "Бидний тухай",
-  desc: "ЭФ ЭНД ЭФ КАТЕРИНГ  ХХК нь  анх  2016 онд 2  хүний бүрэлдэхүүнтэй байгуулагдсан ба  чанартай  хүнсний  ногоо, жимс жимсгэнийг  ресторан,зоогийн газарт нийлүүлэх зорилготойгоор үйл ажиллагаа явуулж эхэлсэн. Манай орны цаг агаарын эрс тэс уур амьсгалтай  холбоотой нарийн ногоо жимс жимсгэнийг БНХАУ –с  импортоор оруулж ирэхээс гадна  зуны улиралд дотоодын хүлэмжийн аж ахуй эрхлэгч нартай  хамтарч  өглөө бүр шинэ ургацын нарийн ногоог  харилцагч нартаа тогтмол нийлүүлж байна.2022оноос  бид үйл ажиллагаагаа улам өргөжүүлж олон улсын чанарын шаардлага хангасан ногооны агуулах,бэлтгэх цех зэргийг ашиглалтанд оруулсан. Анх байгуулагдсан цагаас хойш ресторан ,зоогийн газар, хоол үйлдвэрлэлийн салбарын хөгжилд тасралтгүй хувь нэмрээ оруулан ажиллаж байгаа бөгөөд өнөөдрийн байдлаар 50 харилцагч, 10 гаруй ажилчинтайгаар үйл ажиллагаа явуулж байна.",
+  desc: [
+    {
+      title:
+        "ЭФ ЭНД ЭФ КАТЕРИНГ  ХХК нь  анх  2016 онд 2  хүний бүрэлдэхүүнтэй байгуулагдав.",
+      photo: photo1,
+    },
+    {
+      title:
+        "Чанартай  хүнсний  ногоо, жимс жимсгэнийг  ресторан,зоогийн газарт нийлүүлэх зорилготой.",
+      photo: photo2,
+    },
+    {
+      title: "Шинэ ургацын нарийн ногоог  харилцагч нартаа тогтмол нийлүүлдэг.",
+      photo: photo3,
+    },
+    {
+      title:
+        "Өнөөдрийн байдлаар 50 харилцагч, 10 гаруй ажилчинтайгаар үйл ажиллагаа явуулж байна.",
+      photo: photo5,
+    },
+  ],
+
   image: benefitOneImg,
   bullets: [
     {
       title: "Олон жилийн туршлага",
-      desc: "Then explain the first point breifly in one ",
+      desc: "Хүнсний ногооны салбарт хуримтлуулсан туршлага",
       icon: <EmojiHappyIcon />,
     },
     {
       title: "Итгэл даах түнш",
-      desc: "Here you can add the next benefit point.",
+      desc: "Олон харилцагчийн итгэлийг даан ажиллаж байгаа",
       icon: <ChartSquareBarIcon />,
     },
     {
       title: "Найдвартай бүтээгдэхүүн",
-      desc: "This will be your last bullet benefit point ",
+      desc: "Олон улсын стандартыг  мөрдөн ажилдаг",
       icon: <CursorClickIcon />,
     },
   ],

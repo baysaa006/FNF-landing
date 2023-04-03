@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import Container from "./container";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Slider from "./image_slider";
+import Container from "./container";
+
 export default function About(props) {
   const { data } = props;
 
@@ -15,12 +17,24 @@ export default function About(props) {
         }`}
       >
         <div className="flex flex-col lg:items-center w-full mt-4">
-          <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
+          <h3 className="max-w-2xl mb-4 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
             {data.title}
           </h3>
-          <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl ">
-            {data.desc}
-          </p>
+          {data.desc.map((e) => (
+            <Section>
+              <div className="mb-4">
+                <Image
+                  className="rounded-lg"
+                  height={300}
+                  width="auto"
+                  src={e.photo}
+                />
+                <p className="max-w-2xl text-lg leading-normal text-gray-500 lg:text-xl xl:text-2xl  ">
+                  {e.title}
+                </p>
+              </div>
+            </Section>
+          ))}
         </div>
         <div className="w-full mt-5 gap-4 flex flex-col lg:gap-4 lg:flex-row lg:justify-between ">
           {data.bullets.map((item, index) => (
