@@ -8,12 +8,9 @@ import {
   benefitOne1,
 } from "../components/data";
 import About from "../components/about";
-import About1 from "../components/avout";
 import Products from "../components/products";
 import Footer from "../components/footer";
-import Pricing from "../components/pricing";
 import Contact from "../components/contact";
-import styles from "../css/style.module.css";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -49,10 +46,6 @@ export default function Home() {
       <Section>
         <About data={benefitOne} />
       </Section>
-      <Section>
-        <About1 data={benefitOne1} />
-      </Section>
-
       <Section>
         <Products data={products} />
       </Section>

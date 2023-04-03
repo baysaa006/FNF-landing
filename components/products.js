@@ -13,17 +13,18 @@ export default function Products(props) {
           <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
             {data.title}
           </h3>
-          <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl ">
+          <h1 className=" mt-10 text-gray-800 text-3xl">Тун удахгүй...</h1>
+          {/* <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl ">
             {data.desc}
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="w-full mt-5 flex flex-col lg:gap-4 lg:flex-row lg:justify-between ">
-        {data.product.map((item, index) => (
+        {/* {data.product.map((item, index) => (
           <Product key={index} title={item.title} image={item.image}>
             {item.desc}
           </Product>
-        ))}
+        ))} */}
       </div>
     </Container>
   );

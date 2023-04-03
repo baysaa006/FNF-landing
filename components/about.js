@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import Slider from "./image_slider";
 import Container from "./container";
 
 export default function About1(props) {

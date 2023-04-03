@@ -51,7 +51,7 @@ function Contacts(props) {
                 (props.title === "Утас" && `tel:+${props.desc}`) ||
                 (props.title === "И-майл" && `mailto:${props.desc}`) ||
                 (props.title === "Хаяг" &&
-                  `http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003`)
+                  `http://maps.google.com/?q=1200 Eco Mogul LLC, W248+VMV, Ulaanbaatar`)
               }
             >
               {React.cloneElement(props.icon, {
