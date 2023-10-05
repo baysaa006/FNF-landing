@@ -17,10 +17,11 @@ export default function Hero() {
         </div>
       </div>
       <div className="flex mb-8  lg:mt-4   relative  items-center justify-center w-full lg:w-1/2">
-        <div clasName=" rounded-l-2xl rounded-t-lg rounded-r-xl">
+        <div className=" rounded-l-2xl rounded-t-lg rounded-r-xl">
           <Image
+            priority={true}
             className="rounded-tr-[40%] rounded-b-[40%] rounded-tl-3xl"
-            height={400}
+            height={"auto"}
             width={300}
             src={heroImg}
             alt="hero"
@@ -45,7 +46,7 @@ export default function Hero() {
         a 37,37 0 1,1 -74,0"
                 />
               </defs>
-              <text font-size="16">
+              <text fontSize="16">
                 <textPath className="uppercase font-semibold " href="#circle">
                   Хамгийн шилдэг
                 </textPath>

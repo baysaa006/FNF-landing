@@ -15,14 +15,14 @@ export default function About1(props) {
           props.imgPos === "right" ? "lg:justify-end" : ""
         }`}
       >
-        <h3 className="max-w-2xl mb-4 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
+        <h3 className="max-w-2xl mb-6 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
           {data.title}
         </h3>
-        <div className=" md:gap-3 md:grid md:grid-cols-2 md:items-start justify-start xl:items-start w-full mt-4">
-          {data.desc.map((e) => (
-            <Section>
+        <div className=" md:gap-12 md:grid md:grid-cols-2 md:items-start justify-start xl:items-start w-full mt-4">
+          {data.desc.map((e, index) => (
+            <Section key={index}>
               <div className="mb-4 xl:items-center h-max md:justify-between">
-                <Image className="rounded-lg" width="auto" src={e.photo} />
+                <Image priority={true} className=" md:mb-4 rounded-lg" width="auto"  hei src={e.photo} alt="desc" />
                 <p className="max-w-2xl text-lg leading-normal text-gray-500 lg:text-xl xl:text-2xl  ">
                   {e.title}
                 </p>

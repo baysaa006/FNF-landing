@@ -1,9 +1,7 @@
-import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
 import logo from "../public/favicon.png";
 import Image from "next/image";
 import { AiOutlineContacts } from "react-icons/ai";
-import { IoPricetagsOutline } from "react-icons/io5";
 import { GiFarmTractor } from "react-icons/gi";
 import { HiOutlineDocumentText } from "react-icons/hi2";
 
@@ -29,11 +27,11 @@ export default function Navbar() {
     <div className="w-full fixed top-0 z-30 bg-white shadow-md">
       <nav className="container relative flex flex-wrap items-center justify-between px-4 py-3 mx-auto lg:justify-between xl:px-0">
         <Disclosure>
-          {({ open }) => (
+          {({ open , index }) => (
             <>
-              <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
+              <div key={index} className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Disclosure>
-                  <Image height={55} width={55} src={logo} alt="" />
+                  <Image priority={true} height="auto" width={55} src={logo} alt="" />
                   <h3 className="font-bold ml-2 text-black">
                     F&F Catering LLC
                   </h3>
@@ -66,10 +64,9 @@ export default function Navbar() {
                 <Disclosure.Panel className="flex  flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <div className="flex  px-4 py-1 border-b-2 flex-row items-center w-full">
+                      <div key={index} className="flex  px-4 py-1 border-b-2 flex-row items-center w-full">
                         {item.icon}
                         <a
-                          key={index}
                           href={`#${item.route}`}
                           className="w-full p-4 text-gray-500   hover:text-green-500 focus:text-green-500  "
                         >

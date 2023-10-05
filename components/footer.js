@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 import logo from "../public/favicon.png";
-import { Disclosure } from "@headlessui/react";
 
 export default function Footer() {
   const navigation = [
@@ -18,7 +17,7 @@ export default function Footer() {
         <div className=" mb-6 grid max-w-screen-xl grid-cols-1 gap-10 pt-5 mx-auto mt-5 border-t border-gray-100 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="flex flex-row items-center">
-              <Image height={55} width={55} src={logo} alt="" />
+              <Image priority={true} height={55} width={"auto"} src={logo} alt="" />
               <h3 className="font-bold ml-2 text-black">F&F Catering LLC</h3>
             </div>
 

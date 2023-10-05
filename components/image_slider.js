@@ -14,46 +14,46 @@ export default function Slider() {
     <div className={styles.slider}>
       <div className={styles.slide_track}>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner1} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner1} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner2} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner2} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner3} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner3} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner4} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner4} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner5} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner5} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner6} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner6} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner7} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner7} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner1} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner1} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner2} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner2} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner3} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner3} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner4} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner4} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner5} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner5} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner6} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner6} alt="" />
         </div>
         <div className={styles.slide}>
-          <Image loading="eager" className={styles.img} src={partner7} alt="" />
+          <Image width="auto" loading="eager" className={styles.img} src={partner7} alt="" />
         </div>
       </div>
     </div>
