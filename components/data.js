@@ -98,7 +98,7 @@ export const contacts = {
     },
     {
       title: "И-майл",
-      desc: "FandF@gmail.com",
+      desc: "Fandf@gmail.com",
       icon: <AiOutlineMail />,
     },
     {

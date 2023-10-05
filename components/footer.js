@@ -27,38 +27,6 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="">
-            <div className="flex mt-5 space-x-5 text-gray-400 ">
-              <Link
-                href="https://twitter.com/web3templates"
-                target="_blank"
-                rel="noopener"
-              >
-                <span className="sr-only">Twitter</span>
-                <Twitter />
-              </Link>
-              <Link
-                href="https://facebook.com/web3templates"
-                target="_blank"
-                rel="noopener"
-              >
-                <span className="sr-only">Facebook</span>
-                <Facebook />
-              </Link>
-              <Link
-                href="https://instagram.com/web3templates"
-                target="_blank"
-                rel="noopener"
-              >
-                <span className="sr-only">Instagram</span>
-                <Instagram />
-              </Link>
-              <Link href="https://linkedin.com/" target="_blank" rel="noopener">
-                <span className="sr-only">Linkedin</span>
-                <Linkedin />
-              </Link>
-            </div>
-          </div>
         </div>
       </Container>
     </div>
