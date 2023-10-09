@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
+    unoptimized:true,
     remotePatterns: [
       {
         protocol: "https",
@@ -11,7 +12,7 @@ const nextConfig = {
         pathname: "/account123/**",
       },
     ],
-    domains: ["media.graphassets.com"],
+    domains: ["www.fnf.mn"],
   },
 };
 module.exports = nextConfig;
