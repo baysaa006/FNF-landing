@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "aws s3 sync out/ s3://fnf.mn  --region ap-east-1  --profile qmenu"
   },
   "keywords": [
     "nextjs",
@@ -34,7 +35,8 @@
     "babel-plugin-twin": "^1.0.2",
     "postcss": "^8.1.10",
     "tailwindcss": "^3.2.7",
-    "twin.macro": "^3.1.0"
+    "twin.macro": "^3.1.0",
+    "sst": "^2.24.20"
   },
   "babelMacros": {
     "twin": {
